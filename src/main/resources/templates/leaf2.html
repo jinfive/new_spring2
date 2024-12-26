@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>타임리프 예제</h1>
+<h2>과일목록</h2>
+<ul>
+    <li th:each="fruit :${fruits}" th:text="${fruit}"></li>
+
+</ul>
+
+<p>총 과일 개수<span th:text="${total}"></span></p>
+<br>
+<p th:if="${userId}">로그인한 사용자
+    <span th:text="${userId}">root</span>
+</p>
+<p th:unless="${userId}">로그인 되지 않았습니다 로그인하세요</p>
+
+<a th:href="@{/profile(userId=${userId})}">프로필 보기</a>
+
+
+
+
+</body>
+</html>
