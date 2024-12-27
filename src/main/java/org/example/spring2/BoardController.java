@@ -38,9 +38,11 @@ public class BoardController {
 
     @PostMapping("viewPost")
     public String viewPost(BoardVO boardVO, Model model) {
+        System.out.println("boardVO.getId(): " + boardVO.getId());
+        // 값 확인
         model.addAttribute("boardVo", boardVO);
-        System.out.println("계시판 글보기 수행");
         return "viewPost";
     }
+
 
 }

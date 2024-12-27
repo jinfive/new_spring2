@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +12,11 @@
     <table>
         <tr>
             <td>회원Id</td>
-            <td>회원pw</td>
+            <td>게시글명</td>
         </tr>
         <tr>
-            <td>apple</td>
-            <td>1234</td>
+            <td th:text="${boardVo.id}">apple</td>
+            <td th:text="${boardVo.name}">1234</td>
         </tr>
         <tr>
             <td colspan="2">
